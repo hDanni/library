@@ -12,13 +12,52 @@
     <div class="header-container">
         <div>Library</div>
         <div class="btn-container">
-            <button>Login</button>
-            <button>+ Add book</button>
+            <button class="add-book-btn">+ Add book</button>
         </div>
     </div>
 
-    <div class="book-container">
-        <div class="book-card"></div>
+    <div class="body-container">
+        <div class="book-container">
+            <div class="book-card">
+                <div>The Hobbit</div>
+                <div>JRR Tolkien</div>
+                <div>295 pages</div>
+                <button class="card-btn">Read</button>
+                <button class="card-btn">Remove</button>
+            </div>
+            <div class="book-card">
+                <div>The Two Towers</div>
+                <div>JRR Tolkien</div>
+                <div>342 pages</div>
+                <button class="card-btn">Read</button>
+                <button class="card-btn">Remove</button>
+            </div>
+        </div>
     </div>
+
+    <div class="modal" id="modal">
+        <form action="" id="popup-form">
+            <fieldset>
+                <div class="form-inputs">
+                <!-- <label for="">Title</label> -->
+                <input type="text" name="" id="" placeholder="Title">
+                <!-- <label for="">Author</label> -->
+                <input type="text" name="" id="" placeholder="Author">
+                <!-- <label for="">Pages</label> -->
+                <input type="text" name="" id="" placeholder="Pages">
+            </div>
+            <div class="form-btns">
+                <div class="radio-btn">
+                <label for="">Read</label>
+                <input type="checkbox" name="" id="">
+                </div>
+                <button class="submit-btn">Submit</button>
+            </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="" id="overlay"></div>
+    
 </body>
 </html>
