@@ -17,10 +17,23 @@ console.log(theHobbit.info());
 // functions
 
 function addBookToLibrary(){
-
 }
 
-// modal pop-up functionality
+const submitBtn = document.querySelector('.submit-btn');
+submitBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    let newBook = new Book(title.value, author.value, pages.value);
+    alert(newBook.info());
+})
+
+function formChange(){
+     let title = document.getElementsByName('title')[0].value;
+     let author = document.getElementsByName('author')[0].value;
+     let pages = document.getElementsByName('pages')[0].value;
+}
+
+// +add book btn to open modal
 const addBookBtn = document.querySelector('.add-book-btn');
 const overlay = document.getElementById('overlay');
 
