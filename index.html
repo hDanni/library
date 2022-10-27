@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
-    <link rel="stylesheet" href="/style.css">
-    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <div class="header-container">
@@ -40,16 +40,16 @@
             <fieldset>
                 <div class="form-inputs">
                 <!-- <label for="">Title</label> -->
-                <input type="text" name="" id="" placeholder="Title">
+                <input type="text" name="title" id="title" placeholder="Title" onkeyup="formChange()" onchange="formChange()">
                 <!-- <label for="">Author</label> -->
-                <input type="text" name="" id="" placeholder="Author">
+                <input type="text" name="author" id="author" placeholder="Author" onkeyup="formChange()" onchange="formChange()">
                 <!-- <label for="">Pages</label> -->
-                <input type="text" name="" id="" placeholder="Pages">
+                <input type="number" name="pages" id="pages" placeholder="Pages" onkeyup="formChange()" onchange="formChange()">
             </div>
             <div class="form-btns">
                 <div class="radio-btn">
                 <label for="">Read</label>
-                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="read-btn" id="read-btn">
                 </div>
                 <button class="submit-btn">Submit</button>
             </div>
