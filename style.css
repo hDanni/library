@@ -117,11 +117,16 @@ fieldset {
 }
 
 input,
-.submit-btn {
+.submit-btn,
+label {
     padding: 10px 20px;
     font-size: large;
-    border-style: thin;
+    border-style: none;
     border-radius: 10px;
+}
+
+.submit-btn {
+    background-color: #00ff7f;
 }
 
 .modal {
@@ -136,8 +141,8 @@ input,
     width: auto;
     height: auto;
     max-width: 80%;
-    padding: 1rem;
-    background-color: white;
+    padding: 2rem;
+    background-color: #e0e0e0;
 }
 .modal.active {
     transform: translate(-50%,-50%) scale(1);
