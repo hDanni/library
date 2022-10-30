@@ -19,9 +19,9 @@
     <div class="body-container">
         <div class="book-container">
             <div class="book-card">
-                <div>The Hobbit</div>
-                <div>JRR Tolkien</div>
-                <div>295 pages</div>
+                <div id="book-title">The Hobbit</div>
+                <div id="book-author">JRR Tolkien</div>
+                <div id="book-pages">295 pages</div>
                 <button class="card-btn">Read</button>
                 <button class="card-btn">Remove</button>
             </div>
@@ -49,7 +49,7 @@
             <div class="form-btns">
                 <div class="radio-btn">
                 <label for="">Read</label>
-                <input type="checkbox" name="read-btn" id="read-btn">
+                <input type="checkbox" name="read-btn" id="read-btn" onchange="formChange()">
                 </div>
                 <button class="submit-btn">Submit</button>
             </div>
