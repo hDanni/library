@@ -16,41 +16,44 @@ const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 295, 'not read yet');
 const theTwoTowers = new Book('The Two Towers', 'J.R.R. Tolkien', 342, 'not read yet')
 
 // library array 
-let myLibrary = [theHobbit, theTwoTowers];
+// let myLibrary = [theHobbit,theTwoTowers];
+let myLibrary = [];
 
 const submitBtn = document.querySelector('.submit-btn');
 submitBtn.addEventListener('click', grabFormData);
 
 function grabFormData(event){
-    event.preventDefault();
-
     let newBook = new Book(title.value, author.value, pages.value);
-    alert(newBook.info());
     addBookToLibrary(newBook);
-    displayArray();
+    addCard(title.value, author.value, pages.value);
+    event.preventDefault();
 }
 const cardContainer = document.querySelector('.book-container');
 
-function addCard(){
+function addCard(title, author, pages, index){
     const newDiv = document.createElement('div');
     newDiv.classList.add('book-card');
+    newDiv.setAttribute('data-index',index)
     cardContainer.appendChild(newDiv);
 
     const bookTitle = document.createElement('div');
     bookTitle.classList.add('book-title');
+    bookTitle.textContent = title;
 
     const bookAuthor = document.createElement('div');
     bookAuthor.classList.add('book-author');
+    bookAuthor.textContent = author;
 
     const bookPages = document.createElement('div');
     bookPages.classList.add('book-pages');
+    bookPages.textContent = pages + " pages";
 
     const readBtn = document.createElement('button');
     const removeBtn = document.createElement('button');
     readBtn.classList.add('card-btn');
-    readBtn.textContent = 'Read'
+    readBtn.textContent = 'Read';
     removeBtn.classList.add('card-btn');
-    removeBtn.textContent = 'Remove '
+    removeBtn.textContent = 'Remove';
 
     newDiv.appendChild(bookTitle);
     newDiv.appendChild(bookAuthor);
@@ -64,10 +67,12 @@ function addBookToLibrary(newBook){
 }
 
 function displayArray(){
-    for (const books of myLibrary){
-        console.log(books);
-    }
-}
+    for (let i = 0; i < myLibrary.length; i++) {
+        let currentBook = myLibrary[i];
+        addCard(currentBook.title,currentBook.author,currentBook.pages,i);
+    }}
+
+displayArray();
 
 function formChange(){
      let title = document.getElementsByName('title')[0].value;
