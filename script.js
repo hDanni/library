@@ -3,8 +3,6 @@ function Book (title, author, pages, read) {
     this.title = title
     this.author = author
     this.pages = pages
-    this.read = read
-    
     this.info = function (){
         return title + " by " + author + ", " + pages + " pages, " + read
     }
@@ -23,9 +21,12 @@ const submitBtn = document.querySelector('.submit-btn');
 submitBtn.addEventListener('click', grabFormData);
 
 function grabFormData(event){
+    
     let newBook = new Book(title.value, author.value, pages.value);
     addBookToLibrary(newBook);
-    addCard(title.value, author.value, pages.value);
+    cardContainer.innerHTML = "";
+    // addCard(title.value, author.value, pages.value);
+    displayArray();
     event.preventDefault();
 }
 const cardContainer = document.querySelector('.book-container');
@@ -71,8 +72,6 @@ function displayArray(){
         let currentBook = myLibrary[i];
         addCard(currentBook.title,currentBook.author,currentBook.pages,i);
     }}
-
-displayArray();
 
 function formChange(){
      let title = document.getElementsByName('title')[0].value;
