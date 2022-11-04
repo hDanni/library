@@ -53,7 +53,8 @@ function addCard(title, author, pages, index){
     const removeBtn = document.createElement('button');
     readBtn.classList.add('card-btn');
     readBtn.textContent = 'Read';
-    removeBtn.classList.add('card-btn');
+    removeBtn.classList.add('remove-btn');
+    // removeBtn.setAttribute('id','remove-btn');
     removeBtn.textContent = 'Remove';
 
     newDiv.appendChild(bookTitle);
@@ -61,6 +62,19 @@ function addCard(title, author, pages, index){
     newDiv.appendChild(bookPages);
     newDiv.appendChild(readBtn);
     newDiv.appendChild(removeBtn);
+    
+    const removeButton = document.querySelectorAll('.remove-btn');
+
+    removeButton.forEach((button) => {
+        button.addEventListener('click', () => {
+            console.log(newDiv.dataset.index);
+        });
+    });
+
+    function removeCard() {
+        // const divIndex = document.querySelector('.book-card').getAttribute('data-index');
+        console.log(currentIndex);
+    }
 }
 
 function addBookToLibrary(newBook){
