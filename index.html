@@ -9,55 +9,55 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
+    <body>
     <div class="header-container">
-        <div>Library</div>
-        <div class="btn-container">
-            <button class="add-book-btn">+ Add book</button>
-        </div>
+      <div>Library</div>
+      <div class="btn-container">
+        <button class="add-book-btn">+ Add book</button>
+      </div>
     </div>
-
+  
     <div class="body-container">
-        <div class="book-container">
-            <!-- <div class="book-card" >
-                <div id="book-title">The Hobbit</div>
-                <div id="book-author">JRR Tolkien</div>
-                <div id="book-pages">295 pages</div>
-                <button class="card-btn">Read</button>
-                <button class="card-btn">Remove</button>
-            </div>
-            <div class="book-card">
-                <div>The Two Towers</div>
-                <div>JRR Tolkien</div>
-                <div>342 pages</div>
-                <button class="card-btn">Read</button>
-                <button class="card-btn">Remove</button>
-            </div> -->
+      <div class="book-container">
+        <!--       <div class="book-card">
+          <div id="book-title">The Hobbit</div>
+          <div id="book-author">JRR Tolkien</div>
+          <div id="book-pages">295 pages</div>
+          <button class="card-btn active">Read</button>
+          <button class="card-btn">Remove</button>
         </div>
+        <div class="book-card">
+          <div>The Two Towers</div>
+          <div>JRR Tolkien</div>
+          <div>342 pages</div>
+          <button class="card-btn inactive">Un-read</button>
+          <button class="card-btn">Remove</button>
+        </div> -->
+      </div>
     </div>
-
+  
     <div class="modal" id="modal">
-        <form action="" id="popup-form">
-            <fieldset>
-                <div class="form-inputs">
-                <!-- <label for="">Title</label> -->
-                <input type="text" name="title" id="title" placeholder="Title" onkeyup="formChange()" onchange="formChange()">
-                <!-- <label for="">Author</label> -->
-                <input type="text" name="author" id="author" placeholder="Author" onkeyup="formChange()" onchange="formChange()">
-                <!-- <label for="">Pages</label> -->
-                <input type="number" name="pages" id="pages" placeholder="Pages" onkeyup="formChange()" onchange="formChange()">
+      <form action="" id="popup-form">
+        <fieldset>
+          <div class="form-inputs">
+            <!-- <label for="">Title</label> -->
+            <input type="text" name="title" id="title" placeholder="Title">
+            <!-- <label for="">Author</label> -->
+            <input type="text" name="author" id="author" placeholder="Author">
+            <!-- <label for="">Pages</label> -->
+            <input type="number" name="pages" id="pages" placeholder="Pages">
+          </div>
+          <div class="form-btns">
+            <div class="radio-btn">
+              <label for="">Read</label>
+              <input type="checkbox" name="read-btn" id="read-btn">
             </div>
-            <div class="form-btns">
-                <div class="radio-btn">
-                <label for="">Read</label>
-                <input type="checkbox" name="read-btn" id="read-btn" onchange="formChange()">
-                </div>
-                <button class="submit-btn">Submit</button>
-            </div>
-            </fieldset>
-        </form>
+            <button class="submit-btn">Submit</button>
+          </div>
+        </fieldset>
+      </form>
     </div>
-
+  
     <div class="" id="overlay"></div>
-    
-</body>
+  </body>
 </html>
