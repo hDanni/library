@@ -95,7 +95,8 @@ button:active{
     border-radius: 5px;
 }
 
-.card-btn {
+.card-btn,
+.remove-btn {
     border: none;
     margin: 5px;
     border-radius: 5px;
@@ -161,4 +162,22 @@ label {
 #overlay.active {
     opacity: 1;
     pointer-events: all;
+}
+
+#read-btn.active {
+  background-color: green;
+  color: white;
+}
+
+#read-btn.inactive {
+    background-color: red;
+  color: white;
+}
+.card-btn.active {
+  background-color: green;
+  color: white;
+}
+.card-btn.inactive {
+  background-color: red;
+  color: white;
 }
