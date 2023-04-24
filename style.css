@@ -67,6 +67,8 @@ body{
     font-weight: bold;
     border-radius: 10px;
     cursor:pointer;
+    background-color: rgb(41, 163, 41);
+    color: white;
 }
 
 button:hover{
